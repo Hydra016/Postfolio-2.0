@@ -1,11 +1,11 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
-import FadeIn from "react-fade-in";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Navbar from "./Navbar";
 import CustomAnimation from "./CustomAnimation";
 import Menu from "./Menu";
+import { Fade } from "react-reveal";
 
 function LandingComponent() {
   const [show, setShow] = useState(false);
@@ -32,7 +32,7 @@ function LandingComponent() {
             />
           </div>
           {show ? (
-            <FadeIn transitionDuration={600}>
+            <Fade>
               <div className="content">
                 I'm a frontend web developer with a passion for creating
                 visually stunning and user-friendly websites. My goal is to help
@@ -48,7 +48,7 @@ function LandingComponent() {
                 <span className="contact-text">Download CV</span> <ArrowForwardIosIcon className="btn-icon" />
                 </Link>
               </div>
-            </FadeIn>
+            </Fade>
           ) : null}
         </div>
         <div>

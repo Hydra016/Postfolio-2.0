@@ -1,6 +1,6 @@
 import React from 'react'
 import Lottie from 'react-lottie'
-import FadeIn from "react-fade-in";
+import { Fade } from 'react-reveal'
 
 const CustomAnimation = ({ name, height, width, message, customClass }) => { 
     const defaultOptions = {
@@ -13,10 +13,10 @@ const CustomAnimation = ({ name, height, width, message, customClass }) => {
             } 
     }
   return (
-    <FadeIn transitionDuration={600} className={customClass}>
+    <Fade className={customClass}>
         <Lottie options={defaultOptions} width={width} height={height} />
         <span className='message-text'>{message}</span>
-    </FadeIn>
+    </Fade>
   )
 }
 
